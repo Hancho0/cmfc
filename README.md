@@ -19,7 +19,7 @@ BeginPaint()함수와 EndPaint()함수로 이루어진다.<br>
 MFC 뷰클래스를 WM_PAINT 메시지를 받으면 내부적으로 CPaintDC클래스를 생성하고, OnDraw()함수를 호출해준다.<br>
 그래서 OnDraw()함수를 WM_PAINT처럼 처리하는 것이다.<br>
 
-**CPaintDC 와 CClientDC 는 유사한 것같은데 동일하게 사용하면 되는가?**
+**CPaintDC 와 CClientDC 는 유사한 것같은데 동일하게 사용하면 되는가?** <br>
  
 생성된 윈도우가 다른 윈도우에 가려져서 무효화영역(Invalid Region)이 발생하게 되면 WM_PAINT메세지가 호출되고 WM_PAINT메세지를 처리하는 메세지 핸들러에서 무효화 영역이 복구되어진다.<br>
 다이얼로그 기반대화상자에서 WM_PAINT메세지는 OnPaint() 라는 메세지 함수에서 처리하게 된다.<br>
